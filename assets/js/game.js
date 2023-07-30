@@ -1,5 +1,3 @@
-/** @format */
-
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -8,9 +6,15 @@ var playerMoney = 10;
 // You can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
+
+console.log(enemyNames.length);
+
+for (var i = 0; i < 3; i++) {
+	console.log("apple");
+}
 
 var promptFight = window.prompt(
 	"Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose."
@@ -72,4 +76,11 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 	else {
 		fight();
 	}
-} 
+	// if player did not choose 1 or 2 in prompt
+} else {
+	window.alert("You need to pick a valid option. Try again!");
+}
+}; // end of fight function
+
+// run fight function to start game
+// fight();
